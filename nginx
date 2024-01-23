@@ -1,0 +1,9 @@
+nginx
+    server {
+        listen 8080;
+        listen [::]:8080;
+        server_name 0.0.0.0;
+        location / {
+            proxy_pass http://localhost:3000;
+        }
+    }
